@@ -1,26 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Loto from './components/loto/loto';
+import Lottery from './components/lottery/lottery';
+import BlackJack from './components/blackjack/blackjack';
+import { BrowserRouter, Route } from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+const App = () => <div className="App">
+  <BrowserRouter>
+    <div>
+      <Route exact path="/loto" component={Loto} />
+      <Route exact path="/lottery" component={Lottery} />
+      <Route exact path="/blackjack" component={BlackJack} />
     </div>
-  );
-}
+  </BrowserRouter>
+</div>;
 
 export default App;

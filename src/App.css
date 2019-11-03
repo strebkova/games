@@ -1,22 +1,434 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap&subset=cyrillic');
 
-.App-logo {
-  height: 40vmin;
+body,html{
+  margin: 0;    
+  background-color: #fff;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  height: 100%;
+  overflow-x: hidden;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+p{
+  padding: 0;
+  margin: 0;
+}
+/*
+menu
+*/
+.nav-left{
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  color: #fff;
+  background: linear-gradient(to top, #21391f, #3f8127);
+  padding: 40px 0 35px;
+  box-sizing: border-box;
+  width: 170px;
+  font-size: 11px;
+  z-index: 999999;
+}
+.nav-left a{
+  color: #fff;
+  text-decoration: none;
+}
+.nav-left ul{
+  list-style: none;
+}
+.offset-menu{
+  padding: 0 23px;
+}
+.account{
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
+  line-height: 1.6
+}
+.account h4{
+  font-size: 12px;
+}
+.account img{
+  height: 70px;
+  border-radius: 7px;
+}
+.menu-right-nav{
+  position: relative;
+}
+.vertical-text{
+  width: 130px;
+  padding: 5px 0;
+  box-sizing: border-box;
+  background: linear-gradient(to top, #21391f, #3f8127);
+  text-align: center;
+  transform: rotate(90deg);
+  position: absolute;
+    top: 45px;
+    left: -52px;
+    font-weight: 700;
+    font-size: 14px;
+}
+.menu-right-nav{
+  margin-top: 20px;
+}
+.menu-right-nav ul li{
+  font-size: 13px;
+  padding: 6px 0;
+}
+.other-nav-right img{
+  margin-right: 15px;
+  height: 15px;
+}
+.other-nav-right i{
+  font-size: 15px;
+  margin-right: 15px;
+}
+.other-nav-right .icon-down-dir{
+  font-size: 12px;
+}
+.other-nav-right a{
+  display: inline-block;
+  padding: 8px 0;
+}
+
+.dropdown{
+  font-size: 10px;
+  padding-left: 40px;
+  background-color: #397325;
+  margin: 0 -23px;
+  display: none;
+}
+.dropdown a{
+  display: inline-block;
+  padding: 8px 0;
+}
+.dropdown.open{
+  display: block;
+}
+.soc-media{
+  margin-top: 20px;
+}
+.soc-media img{
+  height: 25px;
+}
+.mobile-open-menu{
+  padding: 10px 35px;
+  background: linear-gradient(to top, #21391f, #3f8127);
+  display: inline-block;
+  color: #fff;
+  font-weight: 700;
+  position: absolute;
+  top: 0;
+}
+.mobile-open-menu:hover{
+  color: #fff;
+  text-decoration: none;
+  transition: 300ms ease
+}
+.mobile-open-menu a{
+  color: #fff;
+  text-decoration: none;
+}
+
+@media(max-width: 1024px){
+  .nav-left{
+    left: -200px;
+    transition: 450ms ease;
+  }
+}
+/*
+end menu
+*/
+.header{
+  width:  100%;
+  padding: 5px 0;
+}
+.container-frame{
+  display: flex;
+  width: 800px;
+  margin: 0 auto;
+}
+.frame{
+  height: 98px;
+  width: 76px;
+  margin-right: 7px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header-avatar{
+  height: 54px;
+  width: 54px;
+  border-radius: 4px;
+  margin: 4px 0 10px;
+}
+
+.header-username{
+  font-size: 13px;
+  color: #fff;
+}
+
+.game-header{
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  bottom: 20px;
+  height: 230px;
+}
+.container-game-header{
+  width: 900px;
+  margin: 0 auto;
+
+}
+.logo-loto{
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 190%;
+}
+.frame-bochki{
+  position: absolute;
+  top: 13px;
+  height: 210px;
+}
+.polka{
+  position: absolute;
+  top: 85%;
+  left: 34.5%;
+  max-width: 100%;
 }
 
-.App-link {
-  color: #09d3ac;
+.active-bochka{
+  height: 150px;
+  position: absolute;
+  top: 40px;
+  left: 45px;
+}
+.last-bockhi{
+  position: absolute;
+  left: 230px;
+  top: 30px;
+  display: flex;
+}
+.last-bochka img{
+  height: 100px;
+  margin-right: 10px;
+}
+.bank{
+  position: absolute;
+  top: 145px;
+  left: 320px;
+  color: #ffed00;
+  font-weight: 700;
+  text-align: center;
+  font-size: 17px
+}
+.bank img{
+  height: 20px;
+}
+.checkboxes{
+  position: absolute;
+  top: 145px;
+  left: 485px;
+  font-size: 14px;
+  color: #fff;
+}
+.game{
+  background-position: center;
+  background-size: cover;
+  margin-top: -40px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column
+}
+.game img{
+  height: 150px;
+}
+.relative{
+  position: relative;
+}
+.blackblock{
+  position: fixed;
+  background-color: rgba(0,0,0,.7);
+  top: 0; 
+  bottom: 0;  
+  right: 0; 
+  left: 0;  
+  z-index: 999999;    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.blackblock.open{
+  display: block;
+}
+.win-block{
+  width: 35vw;
+  height: 90vh;
+  background-color: #fff;
+}
+.header-winblock{
+  padding: 20px 30px;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(45deg, #01842d, #40cf4d);
+}
+.header-winblock:first-child{
+  color: #fff
+}
+
+.winners{
+  padding: 30px 15px 25px;
+}
+.win{
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding-bottom: 10px;
+
+}
+.winner{
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+.winner img{
+  padding-right: 15px;
+}
+
+.bochonki>p{
+  text-align: center;
+  font-weight: 600;
+  padding-bottom: 30px;
+}
+
+.row-bochki{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 15px;
+}
+
+.row-bochki img{
+  width: 44px;
+  height: 44px;
+}
+
+@media (max-width: 450px){
+  body{
+    height: 115vh;
+  }
+  .header{
+    background-size: cover;
+  } 
+  .header-avatar{
+    height: 60px;
+    width: 60px;
+  }
+  .container-frame{
+    max-width: 100%;
+    justify-content: center;
+  }
+  .game-header{
+    max-width: 100%;
+  }
+  .container-game-header{
+    max-width: 100%;
+  }
+  .logo-loto{
+    position: absolute;
+    top: 110px;
+  }
+  .logo-loto img{
+    max-width: 100%;
+    height: 70px;
+  }
+  .frame-bochki{
+    height: 120px;
+    top: 45px;
+  }
+  .active-bochka{
+    height: 85px;
+    top: 60px;
+      left: 32px;
+  }
+  .polka{
+    top: 85px;
+      left: 46.5%;
+  }
+  .last-bockhi{
+    top: 70px;
+    left: 128px
+  }
+  .last-bochka img{
+    height: 30px;
+    margin-right: 2px;
+  }
+  .bank{
+    top: 125px;
+      left: 145px;
+  }
+  .bank img{
+    height: 16px;
+  }
+  .game img{
+    height: 120px;
+  }
+  .game{
+    justify-content: start;
+    padding-top: 20px;
+  }
+ }
+
+ @media(width: 320px){
+  .polka {
+    top: 85px;
+    left: 53.5%;
+  }
+  .bank {
+    top: 125px;
+    left: 130px;
+  }
+  .last-bochka img {
+    height: 22px;
+    margin-right: 0px;
+    } 
+}
+ @media(width: 414px){
+  .polka {
+    top: 85px;
+    left: 42.5%;
+ }
+}
+
+@media(width: 1024px){
+  body{
+    height: 120vh;
+  }
+  .game{
+        height: 550px;
+  }
+}
+@media(width: 1024px){
+  body{
+    height: 120vh;
+  }
+  .game{
+        height: 550px;
+  }
+}
+
+@media (width: 768px){
+  .last-bochka img {
+    height: 60px;
+    margin-right: 2px;
+  }
+  .last-bockhi{
+    top: 70px;
+  }
 }
